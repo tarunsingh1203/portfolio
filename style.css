@@ -160,8 +160,16 @@ html{
 
 
 
+section{
+   opacity: 0;
+   transform: translateY(50px);
+   transition: opacity 1s ease-out, transform 1s ease-out;
+}
 
-
+section.visible {
+   opacity: 1;
+   transform: translateY(0);
+}
 
 
 
@@ -364,7 +372,7 @@ nav{
 .des h1{
    font-size: 90px;
    color: #ffffff;
-   filter: drop-shadow(10px 10px 10px #6a696989);
+   filter: drop-shadow(6px 10px 10px #6a6969);
 }
 
 .des h3{
@@ -478,6 +486,7 @@ nav{
    font-size: 18px;
    font-style: normal;
    margin-bottom: 40px;
+   line-height: 2rem;
 }
 
 
@@ -656,6 +665,10 @@ nav{
    padding-bottom: 30px;
 }
 
+.box p{
+   line-height: 1.5rem;
+}
+
 
 
 
@@ -696,14 +709,13 @@ nav{
    margin: 10vh auto;
    gap: 4rem;
    
-   
 }
 
 .skill{
-   font-family: "Raleway", sans-serif;
-   font-weight: 100;
+   font-family: sans-serif;
+   font-weight: 540;
    color: #7c7b7b;
-   font-size: 16px;
+   font-size: 18px;
    cursor: zoom-in;
    transition: all 0.5s ease-in-out;
 }
@@ -757,8 +769,19 @@ nav{
 }
 
 
-.study{
+.edu-conatiner{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
    margin-top: 10vh;
+}
+
+.edu-img img{
+   height: 500px;
+   width: 500px;
+}
+
+.study{
    height: auto;
    width: auto;
    margin-bottom: 10vh;
@@ -822,6 +845,10 @@ nav{
    filter: drop-shadow(10px 10px 15px #838181f6);
    margin-top: 5vh;
 
+}
+
+.experience p{
+   line-height: 2rem;
 }
 
 .underline-exp-heading1{
@@ -973,6 +1000,7 @@ nav{
    font-size: 16px;
    padding: 25px 20px;
    text-align: center;
+   line-height: 2rem;
 }
 
 .used-lang{
@@ -1066,6 +1094,7 @@ nav{
    font-size: 16px;
    padding: 25px 20px;
    text-align: center;
+   line-height: 2rem;
 }
 
 .used-lang{
@@ -1314,6 +1343,12 @@ footer p{
    }
 
 
+ /* --------------------------------- education -------------------------- */
+
+   .edu-img img{
+      height: 400px;
+      width: 400px;
+   }
 
 
 
@@ -1351,9 +1386,6 @@ footer p{
       font-size: 18px;
       font-weight: 900;
       margin-top: 5rem;
-      color: #000;
-      background-color: #ffffff;
-      border-radius: 2rem;
    }
    
    .icon{
@@ -1504,13 +1536,17 @@ footer p{
    }
 
 
+      /* ------------------------------------------------ Education ----------------------------------------- */
+   
+   
+       .edu-img{
+         display: none;
+      }
+
+
 }
 
 @media screen and (max-width: 870px) {
-
-
-
-
 
 
    /* --------------------------------- about -------------------------- */
@@ -1573,6 +1609,8 @@ footer p{
    .underline-edu-heading2{
       margin-left: 35px;
    }
+
+
 
     /* ------------------------------------------------ Experience ----------------------------------------- */
 
@@ -1874,6 +1912,14 @@ footer p{
       max-width: 100%;
    }
 
+   .exp-course{
+      font-size: 22px
+   }
+
+   .exp-company{
+      font-size: 16px;
+   }
+
      /* ------------------------------------------- projects ------------------------------- */
 
    .django-project-heading{
@@ -1885,11 +1931,11 @@ footer p{
    }
 
    .d-pro-des p{
-      text-align: justify;
+      padding: 25px 0px;
    }
 
    .js-pro-des p{
-      text-align: justify;
+      padding: 25px 0px;
    }
 
 

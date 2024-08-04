@@ -117,50 +117,88 @@ function toggleNavFunction(){
 
 
 
-// --------------- typewrite ----------------
+// --------------- nav typewrite ----------------
 
 
-animationText()
+navAnimationText()
 
-   let id = document.querySelector("#typing-animation")
-   let text1 = "Python Developer"; 
-   let text2 = "Aspiring Full-Stack Web Developer"
+let navId = document.querySelector("#typing-animation")
+let navText1 = "Python Developer"; 
+let navText2 = "Aspiring Full-Stack Web Developer"
 
-   let now = text1;
+let navNow = navText1;
 
-   let index = 0; 
+let index = 0; 
 
-   let arr = []
+let arr = []
 
 
-   function animationText(){
+function navAnimationText(){
 
-      setTimeout(() =>{
+   setTimeout(() =>{
 
-            if(index < now.length){
-               arr.push(now[index])
-               let newArr = arr.join("")
-               //console.log(newArr)
-               id.innerText = newArr + "|"
-               index++;
-               animationText()
+         if(index < navNow.length){
+            arr.push(navNow[index])
+            let newArr = arr.join("")
+            navId.innerText = newArr + "|"
+            index++;
+            navAnimationText()
+         }
+         else{
+            navId.innerText = "|"
+            index = 0
+            for(let i=0; i<45;i++){
+               arr.pop()
+            }
+            navAnimationText()
+            if(navNow === navText1){
+               navNow = navText2
             }
             else{
-               id.innerText = "|"
-               index = 0
-               for(let i=0; i<45;i++){
-                  arr.pop()
-               }
-               animationText()
-               if(now === text1){
-                  now = text2
-               }
-               else{
-                  now = text1
-               }
+               navNow = navText1
             }
-      },200)
-   };
+         }
+   },250)
+};
+
+
+
+
+
+// --------------- contact typewrite ----------------
+
+
+contactAnimationText()
+
+let contactId = document.querySelector("#contact-h1")
+let contactText1 = "I'd Love To Hear From You."; 
+
+let contactIndex = 0;
+let contactArr = []
+
+
+
+function contactAnimationText(){
+
+   setTimeout(() =>{
+
+         if(contactIndex < contactText1.length){
+            contactArr.push(contactText1[contactIndex])
+            let newArr = contactArr.join("")
+            contactId.innerText = newArr + "|"
+            contactIndex++;
+            contactAnimationText()
+         }
+         else{
+            contactId.innerText = "|"
+            contactIndex = 0
+            for(let i=0; i<45;i++){
+               contactArr.pop()
+            }
+            contactAnimationText()
+         }
+   },250)
+};
 
 
 
@@ -207,6 +245,24 @@ document.getElementById('contact-form').addEventListener('submit', function(even
       }
       message.value = ""
 
+});
+
+
+// ------------------------------ animations ------------------------------
+
+const sections = document.querySelectorAll('section');
+const observer = new IntersectionObserver(entries => {
+   entries.forEach(entry => {
+         if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+         }
+   });
+}, {
+   threshold: 0.1
+});
+
+sections.forEach(section => {
+   observer.observe(section);
 });
 
 

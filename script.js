@@ -84,6 +84,7 @@ function menuFunction(){
 
 function toggleNavFunction(){
    const toggleIcon1 = document.querySelector("#toggle-icon1")
+   const toggleIcon2 = document.querySelector("#toggle-icon2")
    const toggleIcon3 = document.querySelector("#toggle-icon3")
    const toggleNavHeading = document.querySelector(".toggle-nav-heading")
    const toggleNavbars = document.querySelector(".toggle-navbars")
@@ -91,7 +92,7 @@ function toggleNavFunction(){
 
    if(toggleNavHeading.className === "toggle-nav-heading"){
       toggleIcon1.className += " toggle-rotate1"
-      icon2.className += " hide"
+      toggleIcon2.className += " hide"
       toggleIcon3.className += " toggle-rotate2"
       toggleNavHeading.className += " responsive"
       toggleNavbars.className += " responsive"
@@ -100,7 +101,7 @@ function toggleNavFunction(){
    }
    else{
       toggleIcon1.className = "icon1"
-      icon2.className = "icon1"
+      toggleIcon2.className = "icon1"
       toggleIcon3.className = "icon1"
       toggleNavHeading.className = "toggle-nav-heading"
       toggleNavbars.className =  "toggle-navbars"

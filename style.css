@@ -1,0 +1,2074 @@
+*{
+   padding: 0;
+   margin: 0;
+}
+
+
+h1{
+   font-family: "Ga Maamli", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+}
+
+
+h2{
+   font-family: "Caveat", cursive;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+}
+
+a, h3 ,p{
+   font-family: "Edu AU VIC WA NT Hand", cursive;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   color: #7c7b7b;
+}
+
+
+::-webkit-scrollbar{
+   width: 10px;
+   background-color: #000;
+   scroll-behavior: smooth;
+   
+}
+
+::-webkit-scrollbar-track{
+   border-radius: 2rem;
+   
+}
+
+::-webkit-scrollbar-thumb{
+   background-color: aqua;
+   border-radius: 2rem;
+}
+
+html{
+   scroll-behavior: smooth;
+}
+
+
+/* ------------------------------- loader ---------------------------------- */
+
+
+.main-loader{
+   height: 100vh;
+   display: flex;
+   width: auto;
+   align-items: center;
+   justify-content: center;
+   background-color: #F6F6F6F6;
+}
+
+.loader{
+   height: fit-content;
+   display: flex;
+   flex-direction: column;
+   gap: 0.2rem;
+   align-items: center;
+   justify-content: center;
+   min-width: 10%;
+   
+}
+
+.loader1{
+   height: 8px;
+   width: 150px;
+   background-color: #000;
+   border-radius: 2rem;
+   box-shadow: 10px 10px 10px #858585,  -5px -2px 10px #858585;
+}
+
+.loader2{
+   margin-left: 2rem;
+   box-shadow: -2px 5px 10px #858585, -4px 1px 10px #6b6b6b;
+}
+
+
+
+
+/* ---------------------------------toggle nav start------------------------------- */
+
+
+
+.toggle-nav{
+   position: fixed;
+   min-width: 100%;
+   width: auto;
+   height: 10vh;
+   z-index: 999999;
+   top: -500px;
+   background-color: #ffffff;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   transition: 0.3s ease-in-out;
+}
+
+.toggle-nav a{
+   color: #000;
+   text-decoration: none;
+   text-transform: uppercase;
+}
+
+.toggle-nav-heading a{
+   font-family: "Caveat", cursive;
+   font-optical-sizing: auto; 
+   font-weight: 700;
+   font-style: normal;
+   font-size: 34px;
+   margin-left: 25px;
+}
+
+.toggle-navbars{
+   display: flex;
+   gap: 2rem;
+   max-width: 100%;
+   width: auto;
+   padding-right: 30px;
+}
+
+.toggle-navbar{
+   font-family: sans-serif;
+}
+
+.toggle-navbars a:hover{
+   font-weight: 700;
+}
+
+.toggle-icon{
+   display: flex;
+   flex-direction: column;
+   gap: 0.2rem;
+   display: none;
+   cursor: pointer;
+}
+
+
+.toggle-nav-heading.responsive{
+   display: none;
+}
+
+.toggle-rotate1{
+   transform: rotate(-45deg)translate(-8px,0px);
+}
+
+.toggle-rotate2{
+   transform: rotate(45deg)translate(-7px,1px);;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------nav start------------------------------- */
+
+
+nav{
+   padding: 15px 30px;
+   min-height: 96vh;
+   height: auto;
+   background-color: #F6F6F6;
+}
+
+.nav-heading h2{
+   font-size: 32px;
+   font-family: sans-serif;
+   animation-name: popupNav;
+   animation-duration: 1s;
+   animation-timing-function: ease-in-out;
+}
+
+
+.heading-margin{
+   margin-top: -410px;
+}
+
+
+.main-navbar{
+   display: flex;
+   align-items: center; 
+   width: auto;
+   justify-content: space-between;
+}
+
+.navbars{
+   display: flex;
+   gap: 2rem;
+}
+
+.home-margin{
+   margin-top: 30px;
+}
+
+.navbar{
+   position: relative;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-family: sans-serif;
+   animation-name: popupNav;
+   animation-duration: 1s;
+   animation-timing-function: ease-in-out;
+   width: fit-content;
+}
+
+.icon-margin{
+   margin-top: -410px;
+}
+
+.icon{
+   display: flex;
+   flex-direction: column;
+   gap: 0.2rem;
+   display: none;
+   cursor: pointer;
+}
+
+.icon1{
+   background-color: #000;
+   height: 6px;
+   width: 35px;
+   border-radius: 1rem;
+}
+
+.rotate1{
+   transform: rotate(-45deg)translate(-8px,0px);
+}
+
+.hide{
+   display: none;
+}
+
+.rotate2{
+   transform: rotate(45deg)translate(-7px,1px);;
+}
+
+
+.navbars.responsive{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+
+.navbar::after{
+   content: '';
+   position: absolute;
+   height: 3px;
+   width: 100%;
+   bottom: -5px;
+   background-color: #000;
+   left: 0;
+   border-radius: 1rem;
+   transition-duration: 0.3s;
+   transition-timing-function: ease-in-out;
+   transform: scalex(0);
+} 
+
+.navbar:hover::after{
+   transform: scalex(1);
+}
+
+
+@keyframes popupNav {
+   from{
+      opacity: 0;
+   }
+   to{
+      opacity: 1;
+   }
+
+}
+
+
+
+
+.description.nav{
+   margin-top: 0vh;
+}
+
+.description{
+   
+   display: flex;
+   height: 80vh;
+   justify-content: space-around;
+   align-items: center;
+   margin-top: 8vh;
+}
+
+.des{
+   margin-top: 0vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: left;
+   height: 60vh;
+   animation-name: leftMove;
+   animation-duration: 2s;
+   animation-timing-function: ease-in-out;
+   
+}
+
+@keyframes leftMove {
+
+   from{
+      margin-left: 300px;
+      opacity: 0;
+   }
+   to{
+      margin-left: 00px;
+      opacity: 1;
+   }
+   
+}
+
+.description img{
+   height: 60vh;
+   width: 60vh;
+   transition: all 0.5s ease-in-out;
+   cursor: zoom-in;
+   
+}
+.description img:hover{
+   transform: scale(1.05);
+   filter: drop-shadow(20px 20px 20px #a2a0a0f6);
+}
+
+.des-img{
+   animation-name: fadein;
+   animation-duration: 2s ;
+   animation-timing-function: ease-in-out;
+   
+}
+
+@keyframes fadein {
+   from{
+      margin-right: 300px;
+      opacity: 0;
+   }
+   to{
+      margin-left: 0px;
+      opacity: 1;
+   }
+   
+}
+
+.des h1{
+   font-size: 90px;
+   color: #ffffff;
+   filter: drop-shadow(10px 10px 10px #666565f6);
+}
+
+.des h3{
+   text-transform: uppercase;
+   color: black;
+   font-size: 28px;
+   font-weight: 700;
+}
+
+.des span{
+   
+   font-size: 24px;
+   margin-top: 1rem;
+}
+
+.navColor1{
+   color: #7c7b7b;
+   text-transform: none;
+}
+.navColor2{
+   font-weight: 600;
+   color: #040447;
+}
+
+.des button{
+   width: 40%;
+   height: 4rem;
+   font-size: 20px;
+   font-weight: 900;
+   margin-top: 5rem;
+   color: #000;
+   background-color: #ffffff;
+   border-radius: 2rem;
+   transition: 0.5s ease-in-out;
+   border: none;
+   text-transform: capitalize;
+   cursor: pointer;
+   box-shadow: inset 6px 6px 10px #d1cfcf;
+}
+
+.des button:hover{
+   box-shadow: inset -6px -6px 10px #b5b3b3f6;
+   transform: scale(1.02);
+}
+
+
+/* ---------------------------- nav end ---------------------------------- */
+
+
+
+/* ---------------------------------about start------------------------------- */
+
+
+.about{
+   background-color: #F6F6F6;
+   height: auto;
+   width: auto;
+   padding: 15px 30px;
+   margin-bottom: 3%;
+   padding-top: 50px;
+}
+
+
+.about-heading{
+   background-clip: border-box;
+   font-size: 80px;
+   text-transform: uppercase;
+   font-weight: 800;
+   color: #fff;
+   filter: drop-shadow(10px 10px 10px #848484f6);
+}
+
+.underline-div{
+   display: flex;
+   flex-direction: column;
+   height: fit-content;
+   row-gap: 0.2rem;
+}
+
+.underline-1{
+   border: 3px solid #000;
+   width: 130px;
+   border-radius: 1rem;
+}
+.underline-2{
+   border: 3px solid #000;
+   width: 130px;
+   border-radius: 1rem;
+   margin-left: 1rem;
+}
+
+.about-data{
+   display: flex;
+   margin-top: 8%;
+   justify-content: space-between;
+   align-items: center;
+   height: fit-content;
+}
+
+.about-para{
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   padding: 10px 10px;
+   height: auto;
+   text-align: left;
+}
+
+.about-para p{
+   font-size: 18px;
+   font-style: normal;
+   margin-bottom: 40px;
+}
+
+
+.resume-skills{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem;
+   justify-content: space-around;
+   width: 50%;
+   margin-top: 4vh;
+   margin-bottom: 10vh;
+}
+
+.about-skill{
+   display: flex;
+   height: 6vh;
+   align-items: center;
+   text-align: center;
+   text-decoration: none;
+   padding: 0px 36px;
+   border-radius: 1.2rem;
+   background-color: #ffffff;
+   transition: 0.7s ease-in-out;
+   color: #000;
+   font-family: sans-serif;
+   font-size: 16px;
+   text-transform: uppercase;
+   font-weight: 700;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.about-resume{
+   padding: 0px 30px;
+}
+
+.about-skill:hover{
+   background-color: #000;
+   color: #fff;
+   transform: scale(1.03);
+}
+
+
+
+.box-3d{
+   width: 30%;
+   height: 60vh;
+}
+
+.about-box{
+   width: 80%;
+   height: 60vh;
+   border-radius: 40%;
+   align-items: end;
+   transform: rotateX(51deg) rotateZ(43deg);
+   transform-style: preserve-3d;
+   border-radius: 32px;
+   cursor: pointer;
+   box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+      28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+   transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
+
+}
+
+
+.about-box:hover {
+   transform: translate3d(0px, -16px, 0px) rotateX(51deg) rotateZ(43deg);
+   box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+     54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+
+}
+
+
+.about-img{
+   margin-top: -170%;
+   width: 30%;
+   margin-left: 20%;
+
+}
+
+.shadow p {
+   font-size: 28px;
+   text-align: start;
+   height: 10vh;
+   opacity: 1;
+}
+
+.about-img img{
+   margin-left: -125%;
+   opacity: 0;
+   transition: all 0.5s ease-in;
+   pointer-events: none;
+}
+
+.about-box:hover ~ .about-img img{
+  opacity: 1;
+}
+
+
+
+/* ---------------------------------about end------------------------------- */
+
+
+
+/* ---------------------------------skills start------------------------------- */
+
+
+
+.main-skill-div{
+   height: auto;
+   padding: 15px 30px;
+   padding-top: 50px;
+   
+}
+
+.skills{
+   
+   height: auto;
+   width: auto;
+}
+
+.skill-heading{
+   
+   font-size: 90px;
+   color: rgb(4, 4, 71);
+   font-weight: 800;
+   filter: drop-shadow(10px 10px 15px #838181f6);
+
+}
+
+.underline-skill-heading1{
+   border: 3px solid #000;
+   width: 130px;
+   border-radius: 1rem;
+}
+
+.underline-skill-heading2{
+   border: 3px solid #000;
+   width: 130px;
+   border-radius: 1rem;
+   margin-left: 1rem;
+}
+
+
+.boxes{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+   gap: 4rem;
+   font-size: 1rem;
+   justify-items: center;
+   margin: 70px 64px;
+}
+
+.box{
+   text-align: center;
+   width: auto;
+   padding: 30px 30px;
+   background-color: #F6F6F6;
+   box-shadow: 10px 10px 20px #ecebeb;
+   transition: 0.3s ease-in-out;
+   cursor: pointer;
+}
+
+.box:hover{
+   border-radius: 2rem;
+   transform: scale(1.02);
+   box-shadow: -6px -6px 12px #e7e7e7;
+
+}
+
+
+.box h3{
+   font-size: 26px;
+   text-transform: capitalize;
+   font-weight: 700;
+   color: #0B2953;
+   padding-bottom: 30px;
+}
+
+
+
+
+
+.all-skills-title{
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+   align-items: center;
+   gap: 0.3rem;
+
+}
+
+
+.all-skills-title h3{
+
+
+   font-family: "Open Sans", sans-serif;
+   font-weight: 800;
+   font-variation-settings:"wdth" 100;
+   text-transform: uppercase;
+   letter-spacing: 0.4rem;
+   font-size: 18px;
+
+}
+
+.underline-all-skills{
+   height: 0.5px;
+   background-color: #7c7b7b;
+   width: 70px;
+}
+
+
+.tech-skills{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+   justify-items: center;
+   margin: 10vh auto;
+   gap: 4rem;
+   
+   
+}
+
+.skill{
+   font-family: "Raleway", sans-serif;
+   font-weight: 100;
+   color: #7c7b7b;
+   font-size: 16px;
+   cursor: zoom-in;
+   transition: all 0.5s ease-in-out;
+}
+
+
+.skill:hover{
+   transform: scale(1.01);
+   text-transform: uppercase;
+   color: #000;
+   outline: 1px solid rgb(4, 4, 71);
+   outline-offset: -9px;
+   padding: 15px 15px;
+   border-radius: 1rem;
+   font-size: 18px;
+   
+}
+
+
+
+/* ------------------------------------------------ Education Start ----------------------------------------- */
+
+
+
+.education{
+   height: auto;
+   padding: 15px 30px;
+   background-color: #F6F6F6F6;
+}
+
+.edu-heading{
+   
+   font-size: 90px;
+   color: #ffffff;
+   font-weight: 800;
+   filter: drop-shadow(10px 10px 15px #838181f6);
+   margin-top: 5vh;
+
+}
+
+.underline-edu-heading1{
+   border: 3px solid #000;
+   width: 150px;
+   border-radius: 1rem;
+}
+
+.underline-edu-heading2{
+   border: 3px solid #000;
+   width: 150px;
+   border-radius: 1rem;
+   margin-left: 1rem;
+}
+
+
+.study{
+   margin-top: 10vh;
+   height: auto;
+   width: auto;
+   margin-bottom: 10vh;
+
+}
+
+
+.course{
+   font-size: 24px;
+   text-transform: capitalize;
+   padding: 5px 0px;
+}
+
+.sc_name{
+   font-size: 18px;
+   text-transform: capitalize;
+   padding: 5px 0px;
+}
+
+.marks{
+   font-size: 16px;
+   text-transform: uppercase;
+   padding: 5px 0px;
+}
+
+.year{
+
+   font-size: 18px;
+   text-transform: capitalize;
+   padding: 5px 0px;
+   color: #000;
+   font-weight: 700;
+
+}
+
+.btech{
+   margin: 3% auto;
+}
+
+
+/* ------------------------------------------------ Education End ----------------------------------------- */
+
+
+
+/* ------------------------------------------------ Experience Start----------------------------------------- */
+
+
+
+
+.experience{
+   height: auto;
+   padding: 15px 30px;
+   background-color: #ffffff;
+}
+
+.exp-heading{
+   
+   font-size: 90px;
+   color: #010B30;
+   font-weight: 800;
+   filter: drop-shadow(10px 10px 15px #838181f6);
+   margin-top: 5vh;
+
+}
+
+.underline-exp-heading1{
+   border: 3px solid #000;
+   width: 170px;
+   border-radius: 1rem;
+}
+
+.underline-exp-heading2{
+   border: 3px solid #000;
+   width: 170px;
+   border-radius: 1rem;
+   margin-left: 1rem;
+}
+
+.exp-data{
+   margin-top: 10vh;
+   margin-bottom: 5vh;
+}
+
+.exp-data1{
+
+   height: auto;
+   max-width: 80%;
+   margin-top: 5vh;
+   margin-bottom: 5vh;
+   left: 0;
+   right: 0;
+   line-height: 2;
+
+}
+
+.exp-course{
+   font-size: 24px;
+   text-transform: capitalize;
+   padding: 5px 0px;
+}
+
+.exp-company{
+   font-size: 18px;
+   font-weight: 400;
+   text-transform: capitalize;
+   color: rgb(24, 24, 232);
+   padding: 5px 0px;
+}
+
+.exp-detail{
+   font-size: 16px;
+   padding: 5px 0px;
+}
+
+.exp-month{
+   font-size: 18px;
+   text-transform: capitalize;
+   color: #000;
+   padding: 5px 0px;
+   font-weight: 700;
+
+}
+
+
+
+/* ------------------------------------------------ Experience End ----------------------------------------- */
+
+
+
+/* ------------------------------------------------ projects Start----------------------------------------- */
+
+
+
+.project{
+   height: auto;
+   padding: 15px 30px;
+   background-color: #F6F6F6;
+}
+
+.pro-heading{
+   
+   font-size: 90px;
+   color: #ffffff;
+   font-weight: 800;
+   filter: drop-shadow(10px 10px 15px #838181f6);
+   margin-top: 5vh;
+
+}
+
+.underline-pro-heading1{
+   border: 3px solid #000;
+   width: 150px;
+   border-radius: 1rem;
+}
+
+.underline-pro-heading2{
+   border: 3px solid #000;
+   width: 150px;
+   border-radius: 1rem;
+   margin-left: 1rem;
+}
+
+.django-project{
+   height: auto;
+   margin-top: 15vh;
+   margin-bottom: 8vh;
+   align-content: center;
+   align-items: center;
+}
+
+.django-project-heading{
+   text-align: center;
+   color: #757474;
+   text-transform: uppercase;
+   font-size: 20px;
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+}
+
+.django{
+   margin: 10vh auto;
+   box-shadow: 10px 10px 15px #d4d3d3, -10px -10px 15px #e9e8e8;
+   display: flex;
+   justify-content: space-between;
+   padding: 4rem;
+   align-items: center;
+   border-radius: 1rem;
+   margin-left: 3%;
+   margin-right: 3%;
+   transition: all 0.3s ease-in-out;
+}
+
+.django:hover{
+   transform: scale(1.01);
+   box-shadow: 10px 10px 20px #d0d0d0, -10px -10px 20px #d0d0d0;
+}
+
+.d-pro-des{
+   max-width: 45%;
+   height: auto;
+}
+
+.d-pro-des h2{
+   text-align: center;
+   padding: 1rem;
+   text-transform: uppercase;
+   color: #0a5acb;
+}
+
+.d-pro-des p{
+   font-size: 16px;
+   padding: 25px 20px;
+   text-align: center;
+}
+
+.used-lang{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   text-align: center;
+   justify-content: center;
+   margin-top: 1rem;
+}
+
+.lang{
+   background-color: #d2e9f0a0;
+   margin: 5px;
+   padding: 2px 8px 2px 8px;
+   border-radius: 0.5rem;
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 13px;
+   color: #0a5acb;
+   font-weight: 600;
+}
+
+.d-pro-img{
+   width: 40%;
+   transition: 0.3s ease-in-out;
+
+}
+.d-pro-img img{
+   max-width: 100%;
+}
+
+
+
+.javascript-project{
+   height: auto;
+   margin: 10vh 5vh;
+   align-content: center;
+   align-items: center;
+}
+
+.javascript-project-heading{
+   text-align: center;
+   color: #757474;
+   text-transform: uppercase;
+   font-size: 20px;
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+}
+
+.javascript-main-projects{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+   column-gap: 5rem;
+
+}
+
+
+.javascript{
+   margin: 10vh auto;
+   box-shadow: 10px 10px 15px #d4d3d3, -10px -10px 15px #e9e8e8;
+   display: flex;
+   justify-content: space-between;
+   padding: 4rem;
+   align-items: center;
+   border-radius: 1rem;
+   transition: all 0.3s ease-in-out;
+   flex-direction: column-reverse;
+   row-gap: 2rem;
+}
+
+.javascript:hover{
+   transform: scale(1.01);
+   box-shadow: 10px 10px 20px #d0d0d0, -10px -10px 20px #d0d0d0;
+}
+
+.js-pro-des{
+   max-width: 100%;
+   height: auto;
+}
+
+.js-pro-des h2{
+   text-align: center;
+   padding: 1rem;
+   text-transform: uppercase;
+   color: #0a5acb;
+}
+
+.js-pro-des p{
+   font-size: 16px;
+   padding: 25px 20px;
+   text-align: center;
+}
+
+.used-lang{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   text-align: center;
+   justify-content: center;
+   margin-top: 1rem;
+}
+
+.lang{
+   background-color: #d2e9f0a0;
+   margin: 5px;
+   padding: 2px 8px 2px 8px;
+   border-radius: 0.5rem;
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 13px;
+   color: #0a5acb;
+   font-weight: 600;
+}
+
+.js-pro-img{
+   width: 100%;
+   transition: 0.3s ease-in-out;
+
+}
+.js-pro-img img{
+   max-width: 100%;
+}
+
+
+
+
+/* --------------------------------- contact ------------------------------------------ */
+
+
+.contact{
+   height: auto;
+   width: auto;
+   text-align: center;
+   background-color: #000411;
+   padding: 15px 30px;
+   display: flex;
+   flex-direction: column ;
+   align-items: center;
+   align-content: center;
+   justify-content: space-around;
+   padding-top: 50px;
+}
+
+.upper-contact-section{
+   margin: 3vh auto;
+   width: auto;
+}
+
+.contact-heading{
+   font-size: 20px;
+   color: #ffffff;
+   text-transform: uppercase;
+   font-weight: 900;
+   font-family: "Oswald", sans-serif;
+   font-optical-sizing: auto;
+   padding: 20px;
+}
+
+.upper-contact-section h1{
+   color: #b8b3b3;
+   font-family: "Oswald", sans-serif;
+   font-weight: 700;
+   text-transform: uppercase;
+   text-shadow: 2px 1px 1px#ecebeb;
+   padding-bottom: 15px;
+   font-size: 34px;
+}
+
+.upper-contact-section p{
+   font-size: 24px;
+   text-transform: capitalize;
+   font-family: "Oswald", sans-serif;
+   padding: 15px;
+}
+
+form{
+   display: flex;
+   flex-direction: column;
+   margin-top: 8vh;
+   padding: 5px;
+   width: auto;
+   min-width: 50%;
+   gap: 2rem;
+}
+
+#name, #subject, #email, #detail, #submit{
+   height: 6vh;   
+   background: transparent;
+   border: none;
+   outline: none;
+   color: #ffffff;
+   border-bottom: 1px solid #757474;
+   font-family: "Oswald", sans-serif;
+   font-weight: 500;
+   font-size: 16px;
+   padding: 5px;
+}
+
+#submit{
+   height: 8vh;   
+   font-size: 24px;
+   background-color: #9a31b4d3;
+   text-transform: uppercase;
+   transition: 0.4s ease-in-out;
+   cursor: pointer;
+   border: none;
+}
+
+#submit:hover{
+   background-color: #820b9f;
+}
+
+#detail{
+   height: 20vh;
+}
+
+
+.accounts{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 5rem;
+   margin-top: 15vh;
+   min-width: 50%;
+   justify-content: space-between;
+   text-align: center;
+   align-items: center;
+   align-content: center;
+
+}
+
+.accounts img{
+   border-radius: 0.5rem;
+   padding: 10px 20px;
+}
+
+.gmail-acc p{
+   padding: 10px;
+   font-family: "Oswald", sans-serif;
+   font-weight: 700;
+   font-size: 18px;
+   color: #ffffff;
+   text-transform: uppercase;
+}
+
+.linkedin-acc p{
+   padding: 10px;
+   padding-bottom: 20px;
+   font-family: "Oswald", sans-serif;
+   font-weight: 700;
+   font-size: 18px;
+   color: #ffffff;
+   text-transform: uppercase;
+}
+
+.gmail-acc .gmail{
+   font-size: 16px;
+   font-weight: 500;
+   color: #cdcbcb;
+   text-transform: none;
+}
+
+.linkedin-acc a{
+   text-decoration: none;
+   font-family: "Oswald", sans-serif;
+   font-weight: 500;
+   font-size: 16px;
+   color: #cdcbcb;
+   transition: 0.2s ease-in-out;
+}
+
+.linkedin-acc a:hover{
+   color: #c20eeed3;
+
+}
+
+
+footer{
+   margin-top: 20vh;
+}
+
+footer p{
+   font-family: "Oswald", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------- media query ----------------------- */
+
+
+
+@media screen and (max-width: 1290px) {
+
+   /* --------------------------------- about -------------------------- */
+
+   .about-img{
+      margin-top: -200%;
+      margin-left: 12%;
+
+   }
+
+   .box-3d{
+      width: 30%;
+      height: 40vh;
+      margin-right: 20px;
+   }
+
+
+   .about-data{
+      justify-content: none;
+   }
+
+   .shadow p {
+      font-size: 24px;
+      text-align: center;
+      height: 10vh;
+      opacity: 1;
+      width: 10rem;
+   }
+
+   .about-img img{
+      height: 70vh;
+      margin-left: -125%;
+
+   }
+
+
+
+
+
+}
+
+
+
+
+@media screen and (max-width: 1250px) {
+
+
+   /* --------------------------------- navbar -------------------------- */
+
+   .description img{
+      height: 55vh;
+      width: 55vh;
+   }
+
+   
+   .des h1{
+      font-size: 70px;
+   }
+
+   .des h3{
+      font-size: 20px;
+   }
+
+   .des p{
+      font-size: 16px;
+   }
+
+   .des button{
+      width: 40%;
+      height: 3rem;
+      font-size: 18px;
+      font-weight: 900;
+      margin-top: 5rem;
+      color: #000;
+      background-color: #ffffff;
+      border-radius: 2rem;
+   }
+   
+   .icon{
+      display: flex;
+   }
+
+   .navbars{
+      display: none;
+   }
+
+
+
+}
+
+
+
+@media screen and (max-width: 1225px) {
+
+   /* --------------------------------- about -------------------------- */
+
+   .about-img{
+      margin-top: -210%;
+      margin-left: 7%;
+   
+   }
+
+
+}
+
+
+
+
+@media screen and (max-width: 1195px) {
+
+   /* --------------------------------- about -------------------------- */
+
+   .about-img{
+      margin-top: -220%;
+      margin-left: 4%;
+   
+   }
+}
+
+@media screen and (max-width: 1170px) {
+
+   .box-3d{
+      margin-right: 30px;
+   }
+}
+
+
+
+
+@media screen and (max-width: 1145px) {
+
+   /* --------------------------------- about -------------------------- */
+   
+   .about-me{
+      font-size: 75px;
+   }
+
+   .underline-1{
+      width: 100px;
+   }
+   .underline-2{
+      width: 100px;
+   }
+
+   .box-3d{
+      display: none;
+   }
+
+   .about-para{
+      width: 100%;
+
+   }
+
+
+   /* ------------------------ skills ------------------------- */
+
+
+
+   .skill-heading{
+   
+      font-size: 75px;
+   
+   }
+   
+   .underline-skill-heading1{
+      width: 100px;
+   }
+   
+   .underline-skill-heading2{
+      width: 100px;
+   }
+
+}
+
+
+
+
+@media screen and (max-width: 1070px) {
+
+
+   /* --------------------------------- toggle-nav -------------------------- */
+
+   .toggle-nav-heading a{
+      font-size: 28px;
+   }
+
+   .hide-toggle{
+      display: none;
+   }
+
+
+
+
+
+
+   /* --------------------------------- navbar -------------------------- */
+
+   .description img{
+      height: 45vh;
+      width: 45vh;
+   }
+
+   .nav-heading h2{
+      font-size: 30px;
+   }
+
+
+   .des h1{
+      font-size: 48px;
+   }
+
+   .des h3{
+      font-size: 16px;
+   }
+
+   .des span{
+      font-size: 20px;
+   }
+
+   .des button{
+      width: 50%;
+      height: 3rem;
+      font-size: 14px;
+   }
+
+
+}
+
+@media screen and (max-width: 870px) {
+
+
+
+
+
+
+   /* --------------------------------- about -------------------------- */
+
+   .about-me{
+      text-align: center;
+      font-size: 75px;
+   
+   }
+
+   .underline-1{
+      width: 90px;
+   }
+   .underline-2{
+      width: 90px;
+      margin-left: 30px;
+   }
+
+
+   /* ------------------------ skills ------------------------- */
+
+
+
+   .skills{
+      text-align: center;
+      font-size: 75px;
+   
+   }
+
+   .underline-div{
+      align-items: center;
+   }
+   
+   .underline-skill-heading1{
+      width: 90px;
+   }
+   
+   .underline-skill-heading2{
+      width: 90px;
+      margin-left: 30px;
+   }
+
+   .boxes{
+      font-size: 14px;
+      margin: 70px auto;
+   }
+   .box h3{
+      font-size: 20px;
+   }
+
+
+   /* ------------------------------------------------ Education ----------------------------------------- */
+
+   .edu-heading{
+      text-align: center;
+      font-size: 75px;
+   }
+
+   
+   .underline-edu-heading2{
+      margin-left: 35px;
+   }
+
+    /* ------------------------------------------------ Experience ----------------------------------------- */
+
+    .exp-heading{
+      text-align: center;
+      font-size: 75px;
+   }
+
+   .underline-exp-heading2{
+      margin-left: 35px;
+   }
+   
+   
+
+
+
+}
+
+
+
+@media screen and (max-width: 805px) {
+
+   /* --------------------------------- toggle-nav -------------------------- */
+
+   .toggle-icon{
+      display: flex;
+   }
+
+   .toggle-navbars a:not(:last-child){
+      display: none;
+      padding-top: 2.5px;
+   }
+
+   .toggle-navbars{
+      justify-content: end;
+      padding-right: 20px;
+   }
+
+   .toggle-navbars.responsive{
+      gap: 0rem;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+   }
+
+   .toggle-navbars.responsive a{
+      display: flex;  
+      font-size: 14px;
+
+   }
+
+   .toggle-nav.responsive{
+      padding-left: 10px;
+   }
+
+
+
+
+
+   /* --------------------------------- about -------------------------- */
+
+   .about-para p{
+      font-size: 16px;
+   }
+
+   
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+   /* --------------------------------- navbar -------------------------- */
+
+   .des-img{
+      display: none;
+   }
+
+
+   .des h1{
+      font-size: 50px;
+   }
+
+   .des h3{
+      font-size: 20px;
+   }
+
+   .des p{
+      font-size: 16px;
+   }
+
+   .des button{
+      width: 50%;
+      font-size: 18px;
+   }
+
+   .description{
+      justify-content: left;
+   }
+
+   .nav-heading h2{
+      margin-left: 0px;
+      font-size: 28px;
+   }
+
+
+   /* --------------------------------- about -------------------------- */
+
+   
+   .about-heading{
+      font-size: 65px;
+   }
+
+    /* --------------------------------- skills -------------------------- */
+
+   
+    .skill-heading{
+      font-size: 65px;
+   }
+
+
+   /* ------------------------------------------------ Education ----------------------------------------- */
+
+   .edu-heading{
+      font-size: 65px;
+   }
+
+   .btech{
+      margin: 10% auto;
+   }
+
+      
+   .course{
+      font-size: 20px;
+   }
+
+   .sc_name{
+      font-size: 16px;
+   }
+
+   .marks{
+      font-size: 14px;
+   }
+
+   .year{
+      font-size: 18px;
+
+   }
+
+
+   /* ------------------------------------------------ Experience ----------------------------------------- */
+
+   .exp-heading{
+      font-size: 65px;
+   }
+
+
+   /* ------------------------------------------- project ------------------------------- */
+
+   .django{
+      margin-left: auto;
+      margin-right: auto;
+      flex-direction: column-reverse;
+      padding: 2rem;
+      row-gap: 2rem;
+   }
+
+   .d-pro-des{
+      max-width: 100%;
+   }
+
+   .d-pro-img{
+      width: 100%;
+   }
+   
+   .javascript-main-projects{
+      display: block;
+
+   }
+
+   .javascript-project{
+      height: auto;
+      margin: 10vh auto;
+
+   }
+   .javascript{
+      padding: 2rem;
+   }
+
+
+   /* ------------------------------------------- achive ----------------------------------------- */
+
+   .achive-heading {
+      font-size: 54px;
+  }
+
+
+  /* ------------------------------------------- contact ------------------------------- */
+
+
+  .accounts{
+   justify-content: center;
+  }
+
+}
+
+
+
+@media screen and (max-width: 580px) {
+
+
+   /* --------------------------------- toggle-nav -------------------------- */
+
+
+   .toggle-navbars.responsive .hide-toggle{
+      display: none;
+   }
+
+   .toggle-icon .icon1{
+      width: 30px;
+      height: 5px;
+   }
+
+   .toggle-icon{
+      gap: 0.2rem;
+   }
+   
+   .toggle-rotate2{
+      transform: rotate(45deg)translate(-6px,2px);;
+   }
+
+   /* --------------------------------- contact -------------------------- */
+
+   form {
+      min-width: 100%;
+  }
+
+}
+
+
+
+
+
+@media screen and (max-width: 470px) {
+
+   /* ----------------------- navbar ---------------------- */
+
+   
+   .nav-heading.heading-margin{
+      display: none;
+   }
+
+   .navbars.responsive{
+      align-items: baseline;
+   }
+
+   .icon-margin{
+      margin-top: -385px;
+   }
+   .home-margin{
+      margin-top: 12px;
+   }
+
+   .des span{
+   
+      font-size: 17px;
+      margin-top: 1rem;
+   }
+
+
+   /* ----------------------- skills ---------------------- */
+
+   .tech-skills{
+      display: grid;
+      grid-template-columns: none;
+   }
+
+   .boxes{
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   .box{
+      flex-grow: 1;
+      flex-basis: 200;
+
+   }
+
+   .all-skills-title h3{
+      font-size: 18px;
+      letter-spacing: 0.1rem;
+   }
+
+
+   /* ------------------------------------------- Experience ------------------------------- */
+
+   .exp-data1{
+      max-width: 100%;
+   }
+
+     /* ------------------------------------------- projects ------------------------------- */
+
+   .django-project-heading{
+      font-size: 16px;
+   }
+
+   .django-project{
+      margin-top: 20vh;
+   }
+
+   .d-pro-des p{
+      text-align: justify;
+   }
+
+   .js-pro-des p{
+      text-align: justify;
+   }
+
+
+   
+   
+
+}
+
+
+
+
+@media screen and (max-width: 390px) {
+
+
+   /* --------------------------------- toggle-navbar -------------------------- */
+
+
+   .toggle-nav-heading a{
+      font-size: 24px;
+   }
+
+   .toggle-navbars.responsive a{
+
+      font-size: 11px;
+
+   }
+
+   .toggle-icon .icon1{
+      width: 20px;
+      height: 4px;
+   }
+
+   .toggle-icon{
+      gap: 0.1rem;
+   }
+
+   .toggle-rotate2{
+      transform: rotate(48deg)translate(-4px,4px);;
+   }
+
+
+
+
+   /* --------------------------------- navbar -------------------------- */
+
+   .des button{
+      width: 50%;
+      font-size: 14px;
+      text-align: center;
+      padding: 15px 10px;
+   }
+
+   
+
+
+    /* ------------------------------------------------ skills ----------------------------------------- */
+
+    .all-skills-title h3{
+      font-size: 14px;
+      letter-spacing: 0.1rem;
+   }
+
+}
+
+
+@media screen and (max-width: 335px) {
+
+   /* ------------------------------------------------ navbar ----------------------------------------- */
+
+
+   .rotate2{
+      transform: rotate(45deg) translate(-6px, 2px);
+   }
+
+
+   .des span{
+   
+      font-size: 15px;
+      margin-top: 1rem;
+   }
+
+
+   /* ------------------------------------------------ Education ----------------------------------------- */
+
+   .edu-heading{
+      font-size: 57px;
+   }
+
+   .btech{
+      margin: 15% auto;
+   }
+
+   .underline-edu-heading1{
+      width: 100px;
+   }
+   
+   .underline-edu-heading2{
+      width: 100px;
+      margin-left: 35px;
+   }
+
+
+   /* ------------------------------------------------ Experience ----------------------------------------- */
+
+   .exp-heading{
+      font-size: 55px;
+   }
+
+   .underline-exp-heading1{
+      width: 110px;
+   }
+   
+   .underline-exp-heading2{
+      width: 110px;
+      margin-left: 35px;
+   }
+
+
+   /* ------------------------------------------- achive ----------------------------------------- */
+
+   .achive-heading {
+      font-size: 50px;
+  }
+
+}
+
+
+@media screen and (max-width: 312px) {
+
+   /* --------------------------------- navbar -------------------------- */
+
+
+   .nav-heading h2{
+      font-size: 20px;
+   }
+
+   .icon .icon1{
+      width: 30px;
+      height: 5px;
+   }
+
+   .icon{
+      gap: 0.15rem;
+   }
+
+   .navbar{
+      font-size: 14px;
+   }
+
+   .icon-margin{
+      margin-top: -370px;
+   }
+
+   .home-margin{
+      margin-top: 8px;
+   }
+
+   .des button{
+      width: 50%;
+      height: 5rem;
+      font-size: 10px;
+      text-align: center;
+      padding: 15px 10px;
+   }
+
+
+
+
+   /* ------------------------------------------------ Experience ----------------------------------------- */
+
+   .exp-heading{
+      font-size: 50px;
+   }
+
+
+   /* ------------------------------------------- achive ----------------------------------------- */
+
+   .achive-heading {
+      font-size: 42px;
+  }
+
+
+
+}

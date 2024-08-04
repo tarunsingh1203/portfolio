@@ -19,9 +19,10 @@ h2{
 }
 
 a, h3 ,p{
-   font-family: "Edu AU VIC WA NT Hand", cursive;
-   font-optical-sizing: auto;
+   font-family: "Ubuntu", sans-serif;
    font-weight: 400;
+   font-style: normal;
+   font-optical-sizing: auto;
    color: #7c7b7b;
 }
 
@@ -363,7 +364,7 @@ nav{
 .des h1{
    font-size: 90px;
    color: #ffffff;
-   filter: drop-shadow(10px 10px 10px #666565f6);
+   filter: drop-shadow(10px 10px 10px #6a696989);
 }
 
 .des h3{
@@ -394,18 +395,19 @@ nav{
    font-size: 20px;
    font-weight: 900;
    margin-top: 5rem;
-   color: #000;
-   background-color: #ffffff;
+   color: #ffffff;
+   background-color: #000000d5;
    border-radius: 2rem;
    transition: 0.5s ease-in-out;
    border: none;
    text-transform: capitalize;
    cursor: pointer;
-   box-shadow: inset 6px 6px 10px #d1cfcf;
+   /* box-shadow: inset 6px 6px 10px #d1cfcf; */
 }
 
 .des button:hover{
-   box-shadow: inset -6px -6px 10px #b5b3b3f6;
+   /* box-shadow: inset -6px -6px 10px #b5b3b3f6; */
+   background-color: #000;
    transform: scale(1.02);
 }
 
@@ -1904,9 +1906,12 @@ footer p{
 
    /* --------------------------------- toggle-navbar -------------------------- */
 
+   .toggle-nav{
+      height: 8vh;
+   }
 
    .toggle-nav-heading a{
-      font-size: 24px;
+      font-size: 22px;
    }
 
    .toggle-navbars.responsive a{
@@ -1938,6 +1943,15 @@ footer p{
       font-size: 14px;
       text-align: center;
       padding: 15px 10px;
+   }
+
+   .icon .icon1{
+      height: 5px;
+      width: 25px;
+   }
+
+   .nav-heading h2{
+      font-size: 25px;
    }
 
    

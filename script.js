@@ -23,6 +23,48 @@ window.onscroll = function(){
 }
 
 
+
+
+loadAnimationText()
+
+let loadId = document.querySelector("#loading")
+let loadText = "..."; 
+
+let loadIndex = 0; 
+
+let loadArr = []
+
+
+function loadAnimationText(){
+
+   setTimeout(() =>{
+
+         if(loadIndex < loadText.length){
+            loadArr.push(loadText[loadIndex])
+            let newArr = loadArr.join("")
+            loadId.innerText = newArr
+            loadIndex++;
+            loadAnimationText()
+         }
+         else{
+            loadId.innerText = ""
+            loadIndex = 0
+            for(let i=0; i<45;i++){
+               loadArr.pop()
+            }
+            loadAnimationText()
+         }
+   },300)
+};
+
+
+
+
+
+
+
+
+
 // ---------------------- toggleNavbars ------------------
 
 function scrollFunction(){

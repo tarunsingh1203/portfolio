@@ -1062,6 +1062,12 @@ nav{
    transition: 0.3s ease-in-out;
 
 }
+
+.net-clo-img{
+   width: 45%;
+}
+
+
 .d-pro-img img{
    max-width: 100%;
 }
